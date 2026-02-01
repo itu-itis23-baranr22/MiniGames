@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:proje1/screens/second_screen.dart';
+import 'package:proje1/screens/rps_war.dart';
 import 'package:proje1/screens/xo.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -66,6 +66,31 @@ class HomeScreen extends StatelessWidget {
                       Icon(Icons.grid_3x3, size: 40),
                       SizedBox(width: 12),
                       Text("XOX"),
+                    ],
+                  ),
+                ),
+              ),
+            ),
+            Card(
+              elevation: 4,
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(12),
+              ),
+              child: InkWell(
+                borderRadius: BorderRadius.circular(12),
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const RpsWar()),
+                  );
+                },
+                child: Padding(
+                  padding: const EdgeInsets.all(16),
+                  child: Row(
+                    children: [
+                      Icon(Icons.science, size: 40),
+                      SizedBox(width: 12),
+                      Text("RPS War"),
                     ],
                   ),
                 ),
