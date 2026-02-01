@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:proje1/screens/second_screen.dart';
+import 'package:proje1/screens/xo.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -17,31 +18,58 @@ class HomeScreen extends StatelessWidget {
         centerTitle: true,
       ),
       body: Center(
-        child: Column(
+        child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
-            ElevatedButton(
-              onPressed: () {},
-              child: Text(
-                "Bana Tikla",
-                style: TextStyle(fontWeight: FontWeight.bold),
+            Card(
+              elevation: 4,
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(12),
+              ),
+              child: InkWell(
+                borderRadius: BorderRadius.circular(12),
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const Xo()),
+                  );
+                },
+                child: Padding(
+                  padding: const EdgeInsets.all(16),
+                  child: Row(
+                    children: [
+                      Icon(Icons.grid_3x3, size: 40),
+                      SizedBox(width: 12),
+                      Text("XOX"),
+                    ],
+                  ),
+                ),
               ),
             ),
-            Text("Merhaba Dünya"),
-            Image.asset('assets/images/logo.png', width: 200, height: 200),
-            Image.network(
-              "https://images.pdimagearchive.org/collections/edith-wharton-italian-villas/italianvillast00whar_0299-edit.jpeg?width=1580&height=800",
-              width: 300,
-            ),
-            IconButton(onPressed: () {}, icon: Icon(Icons.thumb_up)),
-            IconButton(
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => SecondScreen()),
-                );
-              },
-              icon: Icon(Icons.travel_explore_sharp),
+            Card(
+              elevation: 4,
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(12),
+              ),
+              child: InkWell(
+                borderRadius: BorderRadius.circular(12),
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const Xo()),
+                  );
+                },
+                child: Padding(
+                  padding: const EdgeInsets.all(16),
+                  child: Row(
+                    children: [
+                      Icon(Icons.grid_3x3, size: 40),
+                      SizedBox(width: 12),
+                      Text("XOX"),
+                    ],
+                  ),
+                ),
+              ),
             ),
           ],
         ),

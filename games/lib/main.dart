@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:proje1/screens/xo.dart';
+import 'package:proje1/screens/home_screen.dart';
 
 void main() {
   runApp(const Uygulamam());
@@ -13,7 +13,7 @@ class Uygulamam extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(fontFamily: 'Nunito'),
-      home: const Xo(),
+      home: const HomeScreen(),
     );
   }
 }
